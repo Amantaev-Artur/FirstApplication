@@ -1,12 +1,12 @@
 package com.example.firstapplication
 
 import android.content.Context
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 
 internal class GridRVAdapter(
     private val courseList: List<String>,
@@ -21,11 +21,11 @@ internal class GridRVAdapter(
     }
 
     override fun getItem(position: Int): Any? {
-        return null
+        return courseList[position]
     }
 
     override fun getItemId(position: Int): Long {
-        return 0
+        return position.toLong()
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
@@ -45,7 +45,9 @@ internal class GridRVAdapter(
         textView.setText(courseList.get(position))
 
         if (courseList.get(position).toInt() % 2 == 0) {
-            textView.setBackgroundColor(Color.parseColor("#ff0000"));
+            textView.setBackgroundColor(ContextCompat.getColor(context, R.color.red));
+        } else {
+            textView.setBackgroundColor(ContextCompat.getColor(context, R.color.blue));
         }
 
         return convertView

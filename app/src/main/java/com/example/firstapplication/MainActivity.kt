@@ -10,6 +10,7 @@ import kotlin.collections.ArrayList
 class MainActivity : AppCompatActivity() {
     val columnPortrait = 3
     val columnLandscape = 4
+
     lateinit var courseGRV: GridView
     lateinit var courseList: List<String>
     lateinit var btn: Button

@@ -5,24 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-        <fragment
-            android:id="@+id/blank_fragment"
-            class="com.example.firstapplication.BlankFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-<!--    <GridView-->
-<!--        android:id="@+id/idGRV"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:horizontalSpacing="6dp"-->
-<!--        android:numColumns="3"-->
-<!--        android:verticalSpacing="6dp" />-->
+    <fragment
+        android:id="@+id/blank_fragment"
+        class="com.example.firstapplication.BlankFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="Button" />
+        android:text="@string/append_block" />
 </RelativeLayout>
